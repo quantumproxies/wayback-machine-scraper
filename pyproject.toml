@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quanticdata-wayback-machine-scraper"
+version = "0.1.0"
+description = "Wayback Machine scraper for Python and the command line: archived snapshots of a URL or a whole domain with capture time, HTTP status, MIME type, size, content digest and playback links, filtered by date range, as JSON or CSV. Free and open source; sign in with your QuanticData account, no proxies needed."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "QuanticData", email = "hello@quanticdata.io" }]
+keywords = ["wayback-machine", "wayback-machine-scraper", "wayback-machine-api", "internet-archive", "archive-org", "web-archive", "cdx", "snapshots", "historical-data", "osint", "seo", "web-scraping"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.3"]
+
+[project.scripts]
+wayback-machine-scraper = "quanticdata_wayback_machine_scraper.__main__:run"
+
+[project.urls]
+Homepage = "https://quanticdata.io/collectors/wayback-machine-api/?utm_source=github&utm_medium=pypi&utm_campaign=wayback-machine-scraper"
+Documentation = "https://quanticdata.io/docs/"
+Source = "https://github.com/quantumproxies/wayback-machine-scraper"
+Issues = "https://github.com/quantumproxies/wayback-machine-scraper/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"quanticdata_wayback_machine_scraper" = ["spec.json", "py.typed"]

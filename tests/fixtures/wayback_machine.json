@@ -1,0 +1,53 @@
+{
+ "run_id": "cmvkshqc20u8d41o570mfi3s6",
+ "slug": "wayback_machine",
+ "version": "1.1.0",
+ "status": "done",
+ "input": {
+  "target": "quantumproxies.io",
+  "from": "20250101",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:50:43.255Z",
+ "results": [
+  {
+   "rank": 1,
+   "digest": "BPHCWF735B4YFOOZQN36ZTPF46F56E2S",
+   "length": 5712,
+   "raw_url": "https://web.archive.org/web/20250321164954id_/http://quantumproxies.io/",
+   "mimetype": "text/html",
+   "timestamp": "20250321164954",
+   "captured_at": "2025-03-21T16:49:54Z",
+   "status_code": "200",
+   "original_url": "http://quantumproxies.io/",
+   "snapshot_url": "https://web.archive.org/web/20250321164954/http://quantumproxies.io/"
+  },
+  {
+   "rank": 2,
+   "digest": "6UE7UJ6C2Z7KEODEBJRZHVB6CPYWOWL2",
+   "length": 5969,
+   "raw_url": "https://web.archive.org/web/20250321164954id_/https://quantumproxies.io/",
+   "mimetype": "text/html",
+   "timestamp": "20250321164954",
+   "captured_at": "2025-03-21T16:49:54Z",
+   "status_code": "200",
+   "original_url": "https://quantumproxies.io/",
+   "snapshot_url": "https://web.archive.org/web/20250321164954/https://quantumproxies.io/"
+  },
+  {
+   "rank": 3,
+   "digest": "Q6DYCD6EN3L6BS7IDVZUDT5VYCK76E7I",
+   "length": 2713,
+   "raw_url": "https://web.archive.org/web/20260113150651id_/https://quantumproxies.io/",
+   "mimetype": "text/html",
+   "timestamp": "20260113150651",
+   "captured_at": "2026-01-13T15:06:51Z",
+   "status_code": "200",
+   "original_url": "https://quantumproxies.io/",
+   "snapshot_url": "https://web.archive.org/web/20260113150651/https://quantumproxies.io/"
+  }
+ ],
+ "_note": "Real run of 2026-10-23 on our own domain, oldest captures first from 2025-01-01. All three rows kept as delivered."
+}

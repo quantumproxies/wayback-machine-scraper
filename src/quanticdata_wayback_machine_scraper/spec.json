@@ -1,0 +1,96 @@
+{
+ "cli": "wayback-machine-scraper",
+ "name": "Wayback Machine Scraper",
+ "version": "0.1.0",
+ "description": "Wayback Machine scraper for Python and the command line: archived snapshots of a URL or a whole domain with capture time, HTTP status, MIME type, size, content digest and playback links, filtered by date range, as JSON or CSV. Free and open source; sign in with your QuanticData account, no proxies needed.",
+ "links": {
+  "repo": "https://github.com/quantumproxies/wayback-machine-scraper",
+  "page": "https://quanticdata.io/collectors/wayback-machine-api/?utm_source=github&utm_medium=cli&utm_campaign=wayback-machine-scraper",
+  "billing": "https://app.quanticdata.io/billing?utm_source=github&utm_medium=cli&utm_campaign=wayback-machine-scraper",
+  "pricing": "https://quanticdata.io/pricing/?utm_source=github&utm_medium=cli&utm_campaign=wayback-machine-scraper"
+ },
+ "commands": [
+  {
+   "name": "snapshots",
+   "collector": "wayback_machine",
+   "method": "snapshots",
+   "help": "archived snapshots of a URL or domain",
+   "description": "Archived snapshots of a URL or domain in the Internet Archive's Wayback Machine: capture time, HTTP status, MIME type, size and content digest, with the playback link and the raw capture link. --match-prefix covers every URL under a path or domain.",
+   "positional": "target",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "rank",
+    "captured_at",
+    "status_code",
+    "mimetype",
+    "length",
+    "original_url"
+   ],
+   "sample": "wayback_machine",
+   "inputs": [
+    {
+     "name": "target",
+     "type": "string",
+     "required": true,
+     "description": "A page URL or a domain, e.g. quantumproxies.io or https://quanticdata.io/docs/.",
+     "arg": "target"
+    },
+    {
+     "name": "match_prefix",
+     "type": "boolean",
+     "required": false,
+     "description": "Match every URL under this path or domain, not just the exact URL.",
+     "default": false,
+     "arg": "match_prefix"
+    },
+    {
+     "name": "from",
+     "type": "string",
+     "required": false,
+     "description": "Earliest capture, YYYYMMDD (or a longer timestamp).",
+     "arg": "from_"
+    },
+    {
+     "name": "to",
+     "type": "string",
+     "required": false,
+     "description": "Latest capture, YYYYMMDD.",
+     "arg": "to"
+    },
+    {
+     "name": "newest_first",
+     "type": "boolean",
+     "required": false,
+     "description": "Return the most recent captures instead of the oldest.",
+     "default": false,
+     "arg": "newest_first"
+    },
+    {
+     "name": "status_code",
+     "type": "string",
+     "required": false,
+     "description": "Only captures with this HTTP status, e.g. 200.",
+     "arg": "status_code"
+    },
+    {
+     "name": "mimetype",
+     "type": "string",
+     "required": false,
+     "description": "Only captures of this MIME type, e.g. text/html.",
+     "arg": "mimetype"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many snapshots to deliver at most (1–1000). You pay only for delivered snapshots.",
+     "min": 1,
+     "max": 1000,
+     "default": 50,
+     "arg": "max_results"
+    }
+   ]
+  }
+ ]
+}
